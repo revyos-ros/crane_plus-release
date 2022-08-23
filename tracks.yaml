@@ -17,11 +17,11 @@ tracks:
     devel_branch: foxy-devel
     last_release: v1.0.0
     last_version: 1.0.0
-    name: upstream
+    name: crane_plus
     patches: null
     release_inc: '5'
     release_repo_url: null
-    release_tag: v:{version}
+    release_tag: :{version}
     ros_distro: foxy
     vcs_type: git
     vcs_uri: https://github.com/rt-net/crane_plus.git
