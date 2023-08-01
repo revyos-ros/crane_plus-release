@@ -1,4 +1,4 @@
-# Copyright 2020 RT Corporation
+# Copyright 2023 RT Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +20,6 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.actions import SetParameter
 import yaml
 
 
@@ -57,27 +56,26 @@ def generate_launch_description():
     kinematics_yaml = load_yaml('crane_plus_moveit_config', 'config/kinematics.yaml')
 
     declare_example_name = DeclareLaunchArgument(
-        'example', default_value='gripper_control',
+        'example', default_value='color_detection',
         description=('Set an example executable name: '
-                     '[gripper_control, pose_groupstate, joint_values, pick_and_place]')
+                     '[color_detection]')
     )
 
-    declare_use_sim_time = DeclareLaunchArgument(
-        'use_sim_time', default_value='false',
-        description=('Set true when using the gazebo simulator.')
-    )
-
-    example_node = Node(name=[LaunchConfiguration('example'), '_node'],
+    picking_node = Node(name='pick_and_place_tf',
                         package='crane_plus_examples',
-                        executable=LaunchConfiguration('example'),
+                        executable='pick_and_place_tf',
                         output='screen',
                         parameters=[{'robot_description': description_loader.load()},
                                     robot_description_semantic,
                                     kinematics_yaml])
 
+    detection_node = Node(name=[LaunchConfiguration('example'), '_node'],
+                          package='crane_plus_examples',
+                          executable=LaunchConfiguration('example'),
+                          output='screen')
+
     return LaunchDescription([
-        declare_use_sim_time,
-        SetParameter(name='use_sim_time', value=LaunchConfiguration('use_sim_time')),
-        declare_example_name,
-        example_node
+        detection_node,
+        picking_node,
+        declare_example_name
     ])
