@@ -1,3 +1,32 @@
+## crane_plus (humble) - 2.0.1-1
+
+The packages in the `crane_plus` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble crane_plus` on `Fri, 08 Sep 2023 07:20:41 -0000`
+
+These packages were released:
+- `crane_plus`
+- `crane_plus_control`
+- `crane_plus_description`
+- `crane_plus_examples`
+- `crane_plus_gazebo`
+- `crane_plus_moveit_config`
+
+Version of package(s) in repository `crane_plus`:
+
+- upstream repository: https://github.com/rt-net/crane_plus.git
+- release repository: https://github.com/ros2-gbp/crane_plus-release.git
+- rosdistro version: `2.0.0-1`
+- old version: `2.0.0-1`
+- new version: `2.0.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## crane_plus (humble) - 2.0.0-1
 
 The packages in the `crane_plus` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble crane_plus` on `Tue, 01 Aug 2023 08:46:12 -0000`
