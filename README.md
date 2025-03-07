@@ -1,3 +1,32 @@
+## crane_plus (jazzy) - 3.0.0-1
+
+The packages in the `crane_plus` repository were released into the `jazzy` distro by running `/home/z572/gits/revyos-ros/venv2/bin/bloom-release -r jazzy crane_plus --override-release-repository-push-url git@github.com:revyos-ros/crane_plus-release.git` on `Fri, 07 Mar 2025 03:31:56 -0000`
+
+These packages were released:
+- `crane_plus`
+- `crane_plus_control`
+- `crane_plus_description`
+- `crane_plus_examples`
+- `crane_plus_gazebo`
+- `crane_plus_moveit_config`
+
+Version of package(s) in repository `crane_plus`:
+
+- upstream repository: https://github.com/rt-net/crane_plus.git
+- release repository: https://github.com/revyos-ros/crane_plus-release.git
+- rosdistro version: `3.0.0-1`
+- old version: `null`
+- new version: `3.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## crane_plus (humble) - 2.0.1-1
 
 The packages in the `crane_plus` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble crane_plus` on `Fri, 08 Sep 2023 07:20:41 -0000`
